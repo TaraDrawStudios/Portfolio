@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara's Museum of Doom</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1>Tara's Portfolio of Doom</h1>
+
+        <a style="padding: 10px; color: white;" href="index.html">Home</a>
+        <a style="padding: 10px; color: white;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: white;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: white;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class="project-wrapper">
+        <div class="project">
+            <h2>My Projects</h2>
+
+            <div class ="project-row">
+                <div class = "meowBot">
+                    <div class="text-section-style2">
+                        <img src="discord.png" alt="MeowBot Image" class="imageBlock">
+
+                        <h2>
+                            <a href="https://github.com/TaraDrawStudios/MeowBot"
+                            style="color: white;">
+                            MeowBot
+                            </a>
+                        </h2>
+                        <p>
+                            MeowBot is a Discord bot that I created using Python and the discord.py library.
+                            It features a variety of commands, including fun cat facts, image generation, and moderation tools. 
+                            The bot is designed to be user-friendly and customizable, allowing server 
+                            administrators to tailor its functionality to their needs. 
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class = "BirthdayCake">
+                    <div class="text-section-style2">   
+                        
+                        <img src="birthdayCake.png" alt="Birthday Cake Image" class="imageBlock">
+
+                        <h2>Birthday Cake</h2>
+
+                        <p>
+                            Birthday Cake is a simple web application that I created using HTML, CSS, and JavaScript.
+                            This was made for my father on his birthday where he was able to blow out the candles via microphone.
+                            The application also includes a fun animation of a birthday cake with candles that light up on the user's birthday.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class = "breastCancer">
+                    <div class="text-section-style2">   
+                        
+                        <img src="breastCancer.png" alt="Breast Cancer Image" class="imageBlock">
+
+                        <h2>Breast Cancer Prediction</h2>
+
+                        <p>
+                            Breast Cancer Prediction is a machine learning project that I created using Python.
+                            The project uses a dataset of breast cancer cases to train a model that can predict whether a tumor is malignant or benign.
+                            The model is evaluated using metrics such as accuracy, precision and can be used to assist in the diagnosis of breast cancer.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class = "miamiDade">
+                    <div class="text-section-style2">   
+                        
+                        <img src="miamiDade.png" alt="Miami Dade Image" class="imageBlock">
+
+                        <h2>Miami Dade Teach Sign In</h2>
+
+                        <p>
+                            Miami Dade Teach Sign In is an application that I created using java.
+                            The application allows teachers in the Miami Dade school district to sign in and out of their classrooms using a simple interface.
+                            The application also includes a feature that allows administrators to view attendance records and generate reports.
+                            
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="text-section-style1">
+            <h2>Contact Information</h2> 
+
+            <p>
+                Email: taradrawstudios@gmail.com <br>
+                Phone: 786-508-3939
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const page = this.href;
+                const wrapper = document.querySelector(".home-wrapper, .about-wrapper, .project-wrapper");
+
+                wrapper.classList.add("pop-out");
+
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 500);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

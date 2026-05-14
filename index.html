@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara's Museum of Doom</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1>Tara's Portfolio of Doom</h1>
+
+        <a style="padding: 10px; color: white;" href="index.html">Home</a>
+        <a style="padding: 10px; color: white;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: white;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: white;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class="home-wrapper">
+
+        <div class="home">
+            <div class ="text-section-style2">
+                <h2>Welcome to my Portfolio!</h2>
+
+                <p>
+                    This is a collection of my work, projects, and contact information.
+                    Feel free to explore and learn more about me using the navigation links above.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact">
+        <div class="text-section-style1">
+            <h2>Contact Information</h2> 
+
+            <p>
+                Email: taradrawstudios@gmail.com <br>
+                Phone: 786-508-3939
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const links = document.querySelectorAll("a");
+
+        links.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const page = this.href;
+                const wrapper = document.querySelector(".home-wrapper, .about-wrapper");
+
+                wrapper.classList.add("pop-out");
+
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 500);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
