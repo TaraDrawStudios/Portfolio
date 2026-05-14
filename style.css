@@ -1,0 +1,97 @@
+body {
+    background-image: url("C:\Users\1954b\Documents\personal coding projects\website portfolio\purpleCircuitBoard.jpg");
+    background-size: cover;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.header-box {
+    background-color: rgba(64, 46, 234, 0.3);
+    border: rgba(255, 255, 255, 0.2) solid 2px;
+    color: #D200FF;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1, p {
+    margin: 0;
+}
+
+p {
+    margin-top: 5px;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+}
+
+.about-me {
+    background-color: rgba(64, 46, 234, 0.3);
+    border: rgba(255, 255, 255, 0.2) solid 2px;
+    color: white;
+
+    padding: 40px;
+    margin: 20px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.text-section {
+    width: 60%;
+    margin-bottom: 15px;
+}
+
+.image {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: rgba(225, 0, 255, 0.39) solid 3px;
+    margin-left: 20px;
+    margin-top: 10px;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.home-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+}
+
+.home{
+    background-color: rgba(64, 46, 234, 0.3);
+    border: rgba(255, 255, 255, 0.2) solid 2px;
+    color: white;
+
+    padding: 40px;
+    margin: 20px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
