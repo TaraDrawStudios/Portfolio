@@ -263,22 +263,33 @@ a:hover {
     }
     .about-wrapper {
         height: auto;
-        padding: 20px;
+        min-height: auto;
+        padding: 20px 10px;
+        display: block;
     }
 
     .about-me {
         flex-direction: column-reverse;
         width: 90%;
+        margin: 20px auto;
         padding: 20px;
+        text-align: center;
     }
 
-    .text-section-style1 {
+    .about-me .text-section-style1 {
         width: 100%;
+        text-align: left;
     }
 
-    .image {
-        width: 150px;
-        margin: 0 auto 20px auto;
+    .about-me .image {
+        width: 180px;
+        margin: 0 auto 25px auto;
         display: block;
     }
+
+    .contact {
+        margin-top: 30px;
+        text-align: center;
+    }
 }
+
