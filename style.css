@@ -230,3 +230,35 @@ a:hover {
 .pop-out {
     animation: popOut 0.5s ease-in forwards;
 }
+
+@media (max-width: 768px) {
+
+    .project-row {
+        flex-direction: column;
+    }
+
+    .meowBot,
+    .BirthdayCake,
+    .breastCancer,
+    .miamiDade {
+        width: 100%;
+    }
+
+    .project-wrapper {
+        height: auto;
+        padding: 20px;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    .text-section-style2 {
+        width: 100%;
+    }
+
+    .imageBlock {
+        width: 150px;
+        margin-left: 0;
+    }
+}
