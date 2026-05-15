@@ -261,4 +261,24 @@ a:hover {
         width: 150px;
         margin-left: 0;
     }
+    .about-wrapper {
+        height: auto;
+        padding: 20px;
+    }
+
+    .about-me {
+        flex-direction: column-reverse;
+        width: 90%;
+        padding: 20px;
+    }
+
+    .text-section-style1 {
+        width: 100%;
+    }
+
+    .image {
+        width: 150px;
+        margin: 0 auto 20px auto;
+        display: block;
+    }
 }
