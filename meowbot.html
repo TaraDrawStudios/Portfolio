@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Tara's Museum of Doom</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1 style = "font-family: 'Mechsuit', sans-serif;">Tara's Portfolio</h1>
+
+        <a style="padding: 10px; color: #3B306C;" href="index.html">Home</a>
+        <a style="padding: 10px; color: #3B306C;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: #3B306C;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: #3B306C;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class = about-wrapper>
+        <div class="about-me">
+            <div>
+                <img style="width: 300px; height: 300px; animation: popIn 0.5s ease-out forwards;" src="images\\MeowBot.png" alt="MeowBot Image" class="image">
+            </div>
+
+            <div class="text-section-style1">
+                <h2 style = "font-size: 30px; color: white; margin: 0px; font-family: 'Glitch', sans-serif; animation: popIn 0.8s ease-out forwards;">MeowBot</h2>
+                <h1 style="color: rgb(107, 170, 107); margin-bottom: 30px; animation: popIn 1s ease-out forwards;">A Discord Bot for Artists</h1>
+
+                <p style="width: 65%; margin-bottom: 20px; font-size: 18px; animation: popIn 1.2s ease-out forwards;">
+                    MeowBot is a fun and interactive Discord bot designed to help me manage my art server. 
+                    It provides various features such as welcoming new members, moderating content, and creating games and events. 
+                    I built MeowBot using Python and the Discord.py library, allowing me to create custom commands and automate server management tasks. 
+                    The bot has been a great way for me to engage with my community and share my love for art while also honing my programming skills.
+                </p>
+
+                <button class="button" data-href="project.html" style = "animation: popIn 1.5s ease-out forwards;">
+                    Back to Projects
+                </button>
+
+            </div>
+        </div>
+
+   <script>
+        const clickableElements = document.querySelectorAll("a, .button");
+
+        clickableElements.forEach(element => {
+            element.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const page = this.href || this.dataset.href;
+
+                const wrapper = document.querySelector(
+                    ".home-wrapper, .about-wrapper, .project-wrapper, .contactPage"
+                );
+
+                wrapper.classList.add("pop-out");
+
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 800);
+            });
+        });
+    </script>
+
+
+</body> 

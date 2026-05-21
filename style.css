@@ -1,0 +1,386 @@
+body {
+    background-image: url("images\\purpleCircuitBoard.png");
+    background-size: cover;
+    color: black;
+    font-family: Arial, sans-serif; 
+    margin: 0;
+}
+
+.header-box {
+    background-color: white;
+    color: #3B306C;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+
+h1, p {
+    margin: 0;
+}
+
+
+h2 {
+    color: #328038;
+}
+
+.about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+
+    height: 80vh;
+
+}
+
+.about-me {
+
+    color: white;
+
+    padding: 40px;
+    margin: 20px;
+    margin-left: 300px;
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.text-section-style1{
+    width: 65%;
+    margin-bottom: 15px;
+}
+
+.text-section-style2 {
+    width: 60%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.image {
+    width: 230px;
+    height: 330px;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding : 40px;
+}
+.imageBlock {
+    height: auto;
+    margin-left: 20px;
+    margin-top: 10px;
+    padding : 20px;
+
+}
+
+.home-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+
+    
+}
+
+
+.home{
+    color: white;
+
+    padding: 40px;
+    margin: 20px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.button {
+    background-color: #13B874;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.contact {
+    background-color: white;
+    border: #F2FBF8 solid 2px;
+    color: #3B306C;
+    padding: 15px;
+
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+
+    animation: popIn 2s ease-out forwards;
+    
+}
+
+.contactPage{
+    background-color: white;
+    border: #F2FBF8 solid 2px;
+    color: #3B306C;
+
+    padding: 40px;
+    margin: 20px;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+
+.project-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+
+
+    height: 80vh;
+
+}
+
+.project {
+    color: white;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+    margin: 65%;
+}
+
+.project h2 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    gap: 40px;
+}
+
+.project-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    color: rgb(107, 170, 107);
+    font-size: 22px;
+    margin: 10px 0 3px 0;
+}
+
+.project-card p {
+    color: white;
+    font-size: 14px;
+    margin: 0;
+}
+.project-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.meowBot, .BirthdayCake, .breastCancer, .miamiDade {
+    width: 65%;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@font-face {
+    font-family: "Mechsuit"; /* The name you'll use in your CSS */
+    src: 
+         url("font\\Mechsuit.otf") format("truetype"); /* Fallback format */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Glitch"; /* The name you'll use in your CSS */
+    src: 
+         url("font\\Faster Stroker.otf") format("truetype"); /* Fallback format */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes popOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    
+}
+
+/* --- POP OUT TIMESTAMPS --- */
+
+/* --- POP OUT ANIMATION FOR ALL PAGES --- */
+
+.pop-out .text-section-style1 h1,
+.pop-out .text-section-style2 h1,
+.pop-out .project h2 {
+    animation: popOut 0.5s ease-in forwards !important;
+    animation-delay: 0s;
+}
+
+.pop-out .text-section-style1 h2,
+.pop-out .text-section-style2 h2 {
+    animation: popOut 0.5s ease-in forwards !important;
+    animation-delay: 0s;
+}
+
+.pop-out .text-section-style1 p,
+.pop-out .text-section-style2 p,
+.pop-out .project p {
+    animation: popOut 0.5s ease-in forwards !important;
+    animation-delay: 0.15s;
+}
+
+.pop-out .text-section-style1 .button,
+.pop-out .text-section-style2 .button,
+.pop-out .project-card {
+    animation: popOut 0.5s ease-in forwards !important;
+    animation-delay: 0.3s;
+}
+
+.pop-out .image{
+    animation: popOut 0.5s ease-in forwards !important;
+    animation-delay: 0.15s;
+}
+.pop-out .flipped-vector {
+    animation: popOutFlipped 0.5s ease-in forwards !important;
+    animation-delay: 0.15s;
+}
+
+.contactPage.pop-out {
+    animation: popOut 0.5s ease-in forwards !important;
+    animation-delay: 0.15s;
+}
+
+@keyframes popOutFlipped {
+    0% {
+        transform: scaleX(-1) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleX(-1) scale(0.8);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .project-row {
+        flex-direction: column;
+    }
+
+    .meowBot,
+    .BirthdayCake,
+    .breastCancer,
+    .miamiDade {
+        width: 100%;
+    }
+
+    .project-wrapper {
+        height: auto;
+        padding: 20px;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    .text-section-style2 {
+        width: 100%;
+    }
+
+    .imageBlock {
+        width: 150px;
+        margin-left: 0;
+    }
+    .about-wrapper {
+        height: auto;
+        min-height: auto;
+        padding: 20px 10px;
+        display: block;
+    }
+
+    .about-me {
+        flex-direction: column-reverse;
+        width: 90%;
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .about-me .text-section-style1 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .about-me .image {
+        width: 180px;
+        margin: 0 auto 25px auto;
+        display: block;
+    }
+
+    .contact {
+        margin-top: 30px;
+        text-align: center;
+    }
+}

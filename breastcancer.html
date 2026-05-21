@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Tara's Museum of Doom</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1 style = "font-family: 'Mechsuit', sans-serif;">Tara's Portfolio</h1>
+
+        <a style="padding: 10px; color: #3B306C;" href="index.html">Home</a>
+        <a style="padding: 10px; color: #3B306C;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: #3B306C;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: #3B306C;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class = about-wrapper>
+        <div class="about-me">
+            <div>
+                <img style="width: 300px; height: 300px; animation: popIn 0.5s ease-out forwards;" src="images\\breastcancer.png" alt="Breast Cancer Awareness Image" class="image">
+            </div>
+
+            <div class="text-section-style1">
+                <h2 style = "font-size: 30px; color: white; margin: 0px; font-family: 'Glitch', sans-serif; animation: popIn 0.8s ease-out forwards;">Breast Cancer AI Detection</h2>
+                <h1 style="color: rgb(107, 170, 107); margin-bottom: 30px; animation: popIn 1s ease-out forwards;">Research Team</h1>
+
+                <p style="width: 65%; margin-bottom: 20px; font-size: 18px; animation: popIn 1.2s ease-out forwards;">
+                    The Breast Cancer AI Detection project is a research project that focuses on using artificial intelligence to
+                    detect breast cancer in medical images.
+                    This project involves training a few machine learning models on a dataset of mammogram images to identify patterns
+                    and features that are indicative of breast cancer. The goal of this project is to develop a tool that can assist radiologists in the early detection of breast cancer,
+                    ultimately improving patient outcomes and saving lives.
+
+                </p>
+
+                <button class="button" data-href="project.html" style = "animation: popIn 1.5s ease-out forwards;">
+                    Back to Projects
+                </button>
+
+            </div>
+        </div>
+
+        <script>
+            const links = document.querySelectorAll("a, .button");
+
+            links.forEach(link => {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+
+                    const page = this.href || this.dataset.href;
+                    const wrapper = document.querySelector(".home-wrapper, .about-wrapper, .project-wrapper, .contactPage");
+
+                    wrapper.classList.add("pop-out");
+
+                    setTimeout(() => {
+                        window.location.href = page;
+                    }, 500);
+                });
+            });
+        </script>
+
+
+</body> 

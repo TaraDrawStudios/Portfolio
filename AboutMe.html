@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1 style = "font-family: 'Mechsuit', sans-serif;">Tara's Portfolio</h1>
+
+        <a style="padding: 10px; color: #3B306C;;" href="index.html">Home</a>
+        <a style="padding: 10px; color: #3B306C;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: #3B306C;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: #3B306C;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class="about-wrapper" >
+            
+
+        <div class="about-me">
+            <div>
+                <img src="images\\pfp1.jpg" alt="Tara's Picture" class="image" style = "animation: popIn 0.5s ease-out forwards;">
+            </div>
+
+            <div class="text-section-style1">
+                <h2 style = "font-size: 48px; color: white; margin: 0px; font-family: 'Glitch', sans-serif; animation: popIn 0.5s ease-out forwards;">About Me</h2>
+                <h1 style="color: rgb(107, 170, 107); margin-bottom: 30px;animation: popIn 0.8s ease-out forwards;">B.A - Computer Science</h1>
+
+                <p style="width: 65%; margin-bottom: 20px; font-size: 18px; animation: popIn 1s ease-out forwards;">
+                    Hello, my name is Taratong (Tara) Dolinsky, a passionate software and computer science programmer with a love for creating innovative solutions and continuously learning through challenging projects. My interest in development grew stronger after learning about GRASP principles, where I realized the importance of strong creators and collaboration within a development team. Coming from a diverse cultural background as half Thai and half Ukrainian, I’ve developed a unique perspective on problem-solving and creativity, allowing me to approach projects with empathy, adaptability, and inclusivity. Outside of programming, I enjoy gaming, especially games like Minecraft and Baldur’s Gate, listening to music, attending concerts and festivals, exploring new places, trying different cuisines, and spending time with friends and family. My primary goal is to become a highly skilled programmer capable of building innovative solutions for real-world problems while contributing to the open-source community and mentoring aspiring developers. Long term, I hope to lead development teams and create impactful software that positively influences people’s lives. I have experience with Python, Java, JavaScript, HTML/CSS, Git, Docker, and CI/CD pipelines, along with skills in digital art, 3D modeling through Blender and CAD, and creative coding, allowing me to bridge both technical and artistic disciplines in engineering and software projects.
+                </p>
+
+                <button class="button" data-href="project.html" style = "animation: popIn 1.5s ease-out forwards;">
+                    Check Out My Projects
+                </button>
+
+            </div>
+
+            
+
+        </div>
+
+    </div>
+
+    
+
+   <script>
+        const clickableElements = document.querySelectorAll("a, .button");
+
+        clickableElements.forEach(element => {
+            element.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const page = this.href || this.dataset.href;
+
+                const wrapper = document.querySelector(
+                    ".home-wrapper, .about-wrapper, .project-wrapper, .contactPage"
+                );
+
+                wrapper.classList.add("pop-out");
+
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 800);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

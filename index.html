@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara's Museum of Doom</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1 style = "font-family: 'Mechsuit', sans-serif;">Tara's Portfolio</h1>
+
+        <a style="padding: 10px; color: #3B306C;" href="index.html">Home</a>
+        <a style="padding: 10px; color: #3B306C;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: #3B306C;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: #3B306C;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class="home-wrapper">
+
+        <div class="home">
+            <div class ="text-section-style2">
+                <h1 style=" 
+                    color: rgb(107, 170, 107); 
+                    padding: 10px; font-family: 'Glitch', sans-serif; 
+                    font-size: 30px;
+                    animation: popIn 0.5s ease-out forwards; 
+                    ">
+                    Welcome to my Portfolio!
+                </h1>
+
+                <p style = "padding: 20px; animation: popIn 1s ease-out forwards;">
+                    This is a collection of my work, projects, and contact information.
+                    Feel free to explore and learn more about me using the navigation links above.
+                </p>
+
+                <button class="button" data-href="AboutMe.html" style = "animation: popIn 1.5s ease-out forwards;">
+                    Learn More About Me
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+   <script>
+        const clickableElements = document.querySelectorAll("a, .button");
+
+        clickableElements.forEach(element => {
+            element.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const page = this.href || this.dataset.href;
+
+                const wrapper = document.querySelector(
+                    ".home-wrapper, .about-wrapper, .project-wrapper, .contactPage"
+                );
+
+                wrapper.classList.add("pop-out");
+
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 800);
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

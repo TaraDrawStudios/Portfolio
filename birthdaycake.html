@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Tara's Museum of Doom</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1 style = "font-family: 'Mechsuit', sans-serif;">Tara's Portfolio</h1>
+
+        <a style="padding: 10px; color: #3B306C;" href="index.html">Home</a>
+        <a style="padding: 10px; color: #3B306C;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: #3B306C;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: #3B306C;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class = about-wrapper>
+        <div class="about-me">
+            <div>
+                <img style="width: 300px; height: 300px; animation: popIn 0.5s ease-out forwards;" src="images\\birthdaycake.png" alt="Birthday Cake Image" class="image">
+            </div>
+
+            <div class="text-section-style1">
+                <h2 style = "font-size: 30px; color: white; margin: 0px; font-family: 'Glitch', sans-serif; animation: popIn 0.8s ease-out forwards;">Birthday Cake</h2>
+                <h1 style="color: rgb(107, 170, 107); margin-bottom: 30px; animation: popIn 1s ease-out forwards;">An Interactive Cake</h1>
+
+                <p style="width: 65%; margin-bottom: 20px; font-size: 18px; animation: popIn 1.2s ease-out forwards;">
+                    The Birthday Cake is a fun and interactive project designed to celebrate birthdays in a unique way.
+                    It features a cute cake with a candle that can be blown out simply by blowing into the microphone.
+                    The project is built using HTML, CSS, and JavaScript, and it utilizes the Web Audio API to capture the user's breath
+                    and trigger the candle blowing animation.
+                </p>
+
+                <button class="button" data-href="project.html" style = "animation: popIn 1.5s ease-out forwards;">
+                    Back to Projects
+                </button>
+
+            </div>
+        </div>
+
+   <script>
+        const clickableElements = document.querySelectorAll("a, .button");
+
+        clickableElements.forEach(element => {
+            element.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const page = this.href || this.dataset.href;
+
+                const wrapper = document.querySelector(
+                    ".home-wrapper, .about-wrapper, .project-wrapper, .contactPage"
+                );
+
+                wrapper.classList.add("pop-out");
+
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 800);
+            });
+        });
+    </script>
+
+
+</body> 
