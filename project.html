@@ -140,10 +140,18 @@
                 const page = this.href || this.dataset.href;
 
                 const wrapper = document.querySelector(
-                    ".home-wrapper, .about-wrapper, .project-wrapper, .contactPage"
+                    ".home-wrapper, .about-wrapper, .project-wrapper, .contactPage, .arrow"
                 );
 
                 wrapper.classList.add("pop-out");
+
+                const arrows = document.querySelectorAll(".arrow");
+
+                arrows.forEach(arrow => {
+                    arrow.classList.add("pop-out");
+                });
+
+                
 
                 setTimeout(() => {
                     window.location.href = page;
