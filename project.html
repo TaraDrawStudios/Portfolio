@@ -12,7 +12,7 @@
 <body>
 
     <div class="header-box">
-        <h1 style = "font-family: 'Mechsuit', sans-serif; word-spacing: 30px;">Tara's Portfolio</h1>
+        <h1 style="font-family: 'Mechsuit', sans-serif;">Tara's Portfolio</h1>
 
         <a style="padding: 10px; color: #3B306C;" href="index.html">Home</a>
         <a style="padding: 10px; color: #3B306C;" href="AboutMe.html">About Me</a>
@@ -22,6 +22,7 @@
 
     <div class="project-wrapper">
         <div class="project">
+
             <h2 style="margin-bottom: auto; 
                         display: flex; 
                         gap: 20px; 
@@ -29,64 +30,111 @@
                         align-items: center; 
                         font-family: 'Mechsuit', sans-serif; 
                         font-size: 30px;
-                        word-spacing: 10px;
-                        animation: popIn 0.5s ease-out forwards;
-                        ">
-                <!-- Left Image -->
+                        word-spacing: 15px;
+                        animation: popIn 0.5s ease-out forwards;">
+
                 <img style="width: 100px; height: 100px; transform: scaleX(-1);" src="images/vector.png" alt="Projects Image" class="image flipped-vector">
                 
                 My Projects
                 
-                <!-- Right Image -->
-                <img style="width: 100px; height: 100px; " src="images/vector.png" alt="Projects Image" class="image">
+                <img style="width: 100px; height: 100px;" src="images/vector.png" alt="Projects Image" class="image">
             </h2>
 
-
-
-            <p style = " margin-bottom: 30px; font-family: comic sans; font-size: 25px; animation: popIn 0.8s ease-out forwards;">
+            <p style="margin-bottom: 30px; font-family: comic sans; font-size: 25px; animation: popIn 0.8s ease-out forwards;">
                 Click on each project to learn more about it!
             </p>
-            <div class="project-grid" style = "animation: popIn 1s ease-out forwards;">
-                <div class="project-card">
-                    
-                    <a style="color: white;" href="meowbot.html">
-                        <img src="images\\MeowBot.png" alt="MeowBot Image">
-                        <h3 style="text-align: center; color: white">MeowBot</h3>
-                    </a>
+
+            <div class="carousel-container" style="animation: popIn 1s ease-out forwards;">
+
+                <button class="arrow left" onclick="moveProjects(-1)">
+                    &#8592;
+                </button>
+
+                <div class="carousel-window">
+                    <div class="project-grid" id="projectGrid">
+
+                        <div class="project-card">
+                            <a style="color: white;" href="meowbot.html">
+                                <img src="images/MeowBot.png" alt="MeowBot Image">
+                                <h3 style="text-align: center; color: white;">MeowBot</h3>
+                            </a>
+                        </div>
+
+                        <div class="project-card">
+                            <a style="color: white;" href="birthdaycake.html">
+                                <img src="images/BirthdayCake.png" alt="Birthday Cake Image">
+                                <h3 style="text-align: center; color: white;">Birthday Cake</h3>
+                            </a>
+                        </div>
+
+                        <div class="project-card">
+                            <a style="color: white;" href="breastcancer.html">
+                                <img src="images/BreastCancer.png" alt="Breast Cancer Project">
+                                <h3 style="text-align: center; color: white;">Breast Cancer</h3>
+                            </a>
+                        </div>
+
+                        <div class="project-card">
+                            <a style="color: white;" href="miamidade.html">
+                                <img src="images/MiamiDade.png" alt="Miami Dade Project">
+                                <h3 style="text-align: center; color: white;">Miami Dade</h3>
+                            </a>
+                        </div>
+
+                        <div class="project-card">
+                            <a style="color: white;" href="#">
+                                <img src="images/blanksquare.png" alt="Coming Soon Project">
+                                <h3 style="text-align: center; color: white;">Coming Soon</h3>
+                            </a>
+                        </div>
+
+                    </div>
                 </div>
 
-                <div class="project-card">
-                    
-                    <a style="color: white;" href="birthdaycake.html">
-                        <img src="images\\birthdayCake.png" alt="Birthday Cake Image">
-                        <h3 style="text-align: center; color: white">Birthday Cake</h3>
-                    </a>
-                </div>
+                <button class="arrow right" onclick="moveProjects(1)">
+                    &#8594;
+                </button>
 
-                <div class="project-card">
-                    
-                    <a style="color: white;" href="breastcancer.html">
-                        <img src="images\\breastCancer.png" alt="Breast Cancer Project">
-                        <h3 style="text-align: center; color: white">Breast Cancer</h3>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    
-                    <a style="color: white;" href="miamidade.html">
-                        <img src="images\\miamiDade.png" alt="Miami Dade Project">
-                        <h3 style="text-align: center; color: white">Miami Dade</h3>
-                    </a>
-                </div>
             </div>
+
         </div>
     </div>
 
-   <script>
+    <script>
+        let currentIndex = 0;
+
+        function moveProjects(direction) {
+
+            const grid = document.getElementById("projectGrid");
+            const cards = document.querySelectorAll(".project-card");
+
+            const cardWidth = 220; // 180 width + 40 gap
+            const visibleCards = 4;
+            const maxIndex = cards.length - visibleCards;
+
+            currentIndex += direction;
+
+            if (currentIndex > maxIndex) {
+                currentIndex = 0;
+            }
+
+            if (currentIndex < 0) {
+                currentIndex = maxIndex;
+            }
+
+            grid.style.transform =
+                `translateX(-${currentIndex * cardWidth}px)`;
+        }
+
         const clickableElements = document.querySelectorAll("a, .button");
 
         clickableElements.forEach(element => {
             element.addEventListener("click", function(event) {
+
+                if (this.getAttribute("href") === "#") {
+                    return;
+                }
+
                 event.preventDefault();
 
                 const page = this.href || this.dataset.href;
