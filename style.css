@@ -124,8 +124,8 @@ h2 {
     border: #F2FBF8 solid 2px;
     color: #3B306C;
 
-    width: 600px;
-    height: 300px;
+    width: 700px;
+    height: 400px;
 
     padding: 40px;
     border-radius: 15px;
@@ -139,7 +139,30 @@ h2 {
         0 0 20px rgba(255, 255, 255, 0.2);
 }
 
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
 
+.carousel-window {
+    width: 840px;
+    overflow: hidden;
+}
+.arrow {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
 
 .project-wrapper{
     display: flex;
@@ -173,9 +196,9 @@ h2 {
 }
 
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 180px);
+    display: flex;
     gap: 40px;
+    transition: transform 0.4s ease;
 }
 
 .project-card img {
