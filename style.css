@@ -74,6 +74,18 @@ h2 {
     padding : 20px;
 
 }
+.cert-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+
+    animation: popIn 0.5s ease-out forwards;
+}
+.cert-wrapper.pop-out {
+    animation: popOut 0.5s ease-in forwards !important;
+}
 
 .home-wrapper {
     display: flex;
@@ -81,8 +93,6 @@ h2 {
     align-items: center;
 
     height: 80vh;
-
-    
 }
 
 
