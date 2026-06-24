@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tara's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header-box">
+        <h1 style="font-family: 'Mechsuit', sans-serif; word-spacing: 30px;">Tara's Portfolio</h1>
+
+        <a style="padding: 10px; color: #3B306C;" href="index.html">Home</a>
+        <a style="padding: 10px; color: #3B306C;" href="AboutMe.html">About Me</a>
+        <a style="padding: 10px; color: #3B306C;" href="project.html">Projects</a>
+        <a style="padding: 10px; color: #3B306C;" href="certifications.html">Certifications</a>
+        <a style="padding: 10px; color: #3B306C;" href="contacts.html">Contact</a>
+    </div>
+
+    <div class="cert-wrapper">
+        <div class="cert-image">
+            <img src="images/AzureCert.png"
+                 alt="Azure Certification"
+                 style="width: 750px; height: auto;">
+        </div>
+    </div>
+
+    <script>
+        const clickableElements = document.querySelectorAll("a");
+
+        clickableElements.forEach(element => {
+            element.addEventListener("click", function(event) {
+                event.preventDefault();
+
+                const page = this.href;
+
+                const wrapper = document.querySelector(
+                    ".home-wrapper, .about-wrapper, .project-wrapper, .contactPage, .cert-wrapper"
+                );
+
+                wrapper.classList.add("pop-out");
+
+                setTimeout(() => {
+                    window.location.href = page;
+                }, 800);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
