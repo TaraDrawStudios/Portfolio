@@ -49,24 +49,6 @@ h2 {
 
 }
 
-.robloxWrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    height: 80vh;
-
-    animation: popIn 0.5s ease-out forwards;
-}
-
-.robloxImage img {
-    width: 300px;
-    height: 300px;
-    padding: 20px;
-    object-fit: cover;
-}
-
 .text-section-style1{
     width: 65%;
     margin-bottom: 15px;
@@ -103,6 +85,24 @@ h2 {
 }
 .cert-wrapper.pop-out {
     animation: popOut 0.5s ease-in forwards !important;
+}
+
+.robloxWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 80vh;
+
+    animation: popIn 0.5s ease-out forwards;
+}
+
+.robloxImage img {
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    object-fit: cover;
 }
 
 .home-wrapper {
