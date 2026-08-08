@@ -77,11 +77,30 @@ h2 {
 .cert-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
-    height: 80vh;
+    width: 100%;
+    min-height: 80vh;
+    padding: 40px 0;
 
     animation: popIn 0.5s ease-out forwards;
+}
+
+.cert-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 30px;
+    width: 100%;
+}
+
+.cert-image img {
+    width: 750px;
+    max-width: 90%;
+    height: auto;
+    display: block;
 }
 .cert-wrapper.pop-out {
     animation: popOut 0.5s ease-in forwards !important;
